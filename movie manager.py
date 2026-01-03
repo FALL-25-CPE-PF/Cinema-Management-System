@@ -26,3 +26,22 @@ def view_movie():
         return movies
     except FileNotFoundError:
         print("System Hacked all data Deleted!!!")
+
+#-----------REMOVE MOVIES----------------#
+def remove_movie():
+    movies = view_movie()
+    if not movies:
+        return
+
+    try:
+        choice = int(input("Enter movie number to remove: "))
+        movies.pop(choice - 1)
+
+        with open("MOVIE_FILE.txt", "w") as f:
+            f.writelines(movies)
+
+        print("✅ Movie removed successfully!")
+    except:
+        print("❌ Invalid input!")
+
+
