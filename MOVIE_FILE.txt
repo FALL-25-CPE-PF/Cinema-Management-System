@@ -1,1 +1,2 @@
 sultan,action,6:00 pm,450,45
+PK,Comedy,7:00 pm,250,45
