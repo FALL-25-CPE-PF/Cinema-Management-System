@@ -1,4 +1,4 @@
-from config import admin_password
+admin_password = "admin123"
 def admin_mode():
     password=input("Enter admin password: ")
     if password != admin_password:
