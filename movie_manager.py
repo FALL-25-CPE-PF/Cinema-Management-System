@@ -43,7 +43,7 @@ def remove_movie():
         print("✅ Movie removed successfully!")
     except:
         print("❌ Invalid input!")
-
+#-----------UPDATE SEATS-----------------#
 def update_seats():
     movies = view_movie()
     if not movies:
