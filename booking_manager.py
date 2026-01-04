@@ -37,3 +37,13 @@ def view_bookings():
                 print(f"{c} | {m} | {t} tickets | Rs {total}")
     except:
         print("No bookings found.")
+
+def total_revenue():
+    total = 0
+    try:
+        with open("BOOKING_FILE.txt", "r") as f:
+            for b in f:
+                total += int(b.strip().split(",")[3])
+        print("💰 TOTAL REVENUE: Rs", total)
+    except:
+        print("No revenue data.")
