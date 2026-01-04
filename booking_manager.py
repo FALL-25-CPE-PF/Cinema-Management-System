@@ -28,3 +28,12 @@ def book_ticket():
         print("✅ Booking successful! Total: Rs", total)
     except:
         print("❌ Invalid input!")
+
+def view_bookings():
+    try:
+        with open("BOOKING_FILE.txt", "r") as f:
+            for b in f:
+                c, m, t, total = b.strip().split(",")
+                print(f"{c} | {m} | {t} tickets | Rs {total}")
+    except:
+        print("No bookings found.")
