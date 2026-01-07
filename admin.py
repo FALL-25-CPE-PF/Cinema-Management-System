@@ -1,4 +1,5 @@
 from movie_manager import add_movie, view_movie, remove_movie, update_seats
+from booking_manager import view_bookings , total_revenue
 admin_password = "admin123"
 def admin_mode():
     password=input("Enter admin password: ")
@@ -25,10 +26,10 @@ def admin_mode():
             remove_movie()
         elif choice == "4":
             update_seats()
-        # elif choice == "5":
-        #     view_bookings()
-        # elif choice == "6":
-        #     total_revenue()
+        elif choice == "5":
+            view_bookings()
+        elif choice == "6":
+           total_revenue()
         elif choice == "7":
             print("Logging out of admin mode.")
             break
