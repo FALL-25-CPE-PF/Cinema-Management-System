@@ -1,4 +1,4 @@
-from movie_manager import view_movies
+from movie_manager import view_movie
 from booking_manager import book_ticket
 
 def user_mode():
@@ -11,7 +11,7 @@ def user_mode():
         choice = input("Choice: ")
 
         if choice == "1":
-            view_movies()
+            view_movie()
         elif choice == "2":
             book_ticket()
         elif choice == "3":
